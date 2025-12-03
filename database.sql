@@ -8,3 +8,5 @@ INSERT INTO advisors (advisor_id, full_name, email) VALUES
 (1, 'bilal zarrik', 'bilalzarrik11@gmail.com'),
 (2, 'adama traoiri', 'adak11@gmail.com'),
 (3, 'masoud ozile', 'mams11@gmail.com');
+
+
