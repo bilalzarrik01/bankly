@@ -45,3 +45,20 @@ INSERT INTO accounts (account_id, account_number, balance, account_type, custome
 (5, 89, 770374,  'Business',  5, 2),
 (6, 90, 770374,  'Savings',   6, 3);
 
+CREATE TABLE transactions (
+  transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+  amount FLOAT,
+  transaction_type ENUM('debit','credit'),
+  transaction_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+  accountid INT,
+  FOREIGN KEY (accountid) REFERENCES accounts(account_id)
+);
+
+INSERT INTO transactions (transaction_id, amount, transaction_type, transaction_date, accountid) VALUES
+(1, 10000, 'credit', '2025-12-01 16:18:24', NULL),
+(2, 15000, 'credit', '2025-12-01 16:18:37', NULL),
+(3, 15000, 'credit', '2025-12-01 16:18:45', NULL),
+(4, 10000, 'debit',  '2025-12-01 16:19:18', NULL),
+(5, 500,   'debit',  '2025-12-01 16:19:27', NULL),
+(6, 2500,  'credit', '2025-12-01 16:19:43', NULL),
+(7, 3500,  'debit',  '2025-12-01 16:20:21', NULL);
