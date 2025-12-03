@@ -26,3 +26,22 @@ INSERT INTO customers (customer_id, full_name, email, phone, registration_date) 
 (6,'harry potter','magician1@gmail.com','199999885','2025-12-01 15:28:00'),
 (7,'jude bellingham','belli5@gmail.com','195554885','2025-12-01 15:29:19');
 
+CREATE TABLE accounts (
+  account_id INT AUTO_INCREMENT PRIMARY KEY,
+  account_number INT,
+  balance FLOAT,
+  account_type ENUM('Checking','Savings','Business'),
+  customerid INT,
+  advisorid INT,
+  FOREIGN KEY (advisorid) REFERENCES advisors(advisor_id),
+  FOREIGN KEY (customerid) REFERENCES customers(customer_id)
+);
+
+INSERT INTO accounts (account_id, account_number, balance, account_type, customerid, advisorid) VALUES
+(1, 85, 12003.5, 'Savings',   1, 1),
+(2, 86, 15103.5, 'Checking',  2, 2),
+(3, 87, 50003.5, 'Checking',  3, 3),
+(4, 88, 7703.5,  'Business',  4, 1),
+(5, 89, 770374,  'Business',  5, 2),
+(6, 90, 770374,  'Savings',   6, 3);
+
