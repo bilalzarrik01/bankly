@@ -1,3 +1,7 @@
+CREATE DATABASE bankly;
+
+use bankly;
+
 CREATE TABLE advisors (
   advisor_id INT AUTO_INCREMENT PRIMARY KEY,
   full_name VARCHAR(100),
