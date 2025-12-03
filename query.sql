@@ -18,3 +18,9 @@ SELECT * FROM transactions;
 
 SELECT * FROM accounts
 WHERE balance > 10000;
+
+SELECT * FROM accounts
+WHERE balance <= 0;
+
+SELECT * FROM transactions
+WHERE transaction_type = 'debit';
