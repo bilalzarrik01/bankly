@@ -10,3 +10,11 @@ SELECT * FROM customers;
 SELECT full_name, email FROM customers;
 
 SELECT * FROM accounts;
+
+SELECT account_number FROM accounts;
+
+
+SELECT * FROM transactions;
+
+SELECT * FROM accounts
+WHERE balance > 10000;
