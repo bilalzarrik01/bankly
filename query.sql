@@ -44,3 +44,9 @@ WHERE amount >= 500;
 
 SELECT * FROM transactions
 WHERE amount BETWEEN 100 AND 1000;
+
+SELECT * FROM accounts
+WHERE customerid = 1;
+
+SELECT * FROM accounts
+ORDER BY balance ASC;
