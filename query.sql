@@ -35,3 +35,12 @@ SELECT c.*
 FROM customers c
 JOIN accounts a ON c.customer_id = a.customerid
 WHERE a.advisorid = 2;
+
+SELECT * FROM accounts
+WHERE account_type = 'Savings';
+
+SELECT * FROM transactions
+WHERE amount >= 500;
+
+SELECT * FROM transactions
+WHERE amount BETWEEN 100 AND 1000;
