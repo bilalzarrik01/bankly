@@ -24,3 +24,14 @@ WHERE balance <= 0;
 
 SELECT * FROM transactions
 WHERE transaction_type = 'debit';
+
+SELECT * FROM transactions
+WHERE transaction_type = 'credit';
+
+SELECT * FROM transactions
+WHERE accountid = 1;
+
+SELECT c.*
+FROM customers c
+JOIN accounts a ON c.customer_id = a.customerid
+WHERE a.advisorid = 2;
