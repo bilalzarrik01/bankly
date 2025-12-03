@@ -62,3 +62,17 @@ LIMIT 5;
 SELECT *
 FROM transactions
 ORDER BY transaction_date DESC;
+
+SELECT *
+FROM transactions
+ORDER BY transaction_date DESC
+LIMIT 3;
+
+SELECT 
+    a.account_number,
+    a.balance,
+    c.full_name AS customer_name,
+    adv.full_name AS advisor_name
+FROM accounts a
+JOIN customers c ON a.customerid = c.customer_id
+JOIN advisors adv ON a.advisorid = adv.advisor_id;
